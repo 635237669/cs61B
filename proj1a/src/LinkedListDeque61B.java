@@ -222,7 +222,7 @@ private class LinkedListDeque61BIterator implements Iterator<T> {
 
     private class Node {
         private Node prev;
-        private T item;
+        private final T item;
         private Node next;
         public Node(Node a,T b,Node c){
             prev=a;

@@ -11,7 +11,7 @@ public class Percolation {
     private final int virtualBottom;
 
     public Percolation(int N) {
-        if (N<=0)throw new IllegalArgumentException("只能是非负数");;
+        if (N<=0)throw new IllegalArgumentException("只能是非负数");
         int numberOfElements=N*N+2;//需要额外的两个位置来装虚拟顶和底
         gridSize = N;
         uf = new WeightedQuickUnionUF(numberOfElements);//uf是用来算percolates的，uf1是用来算union的，如此设置是为了处理uf的反流，就是计算union的时候通过bottom与top connect的情况（还有一种设计方式好像是给每个结点两个状态，就是需要一个top与一个bottom的数组来对每个节点记录他们是否与top和bottom相连）
