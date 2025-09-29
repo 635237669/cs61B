@@ -132,7 +132,7 @@ public class ArrayDeque61BTest {
         }
         assertThat(lld1.toList()).containsExactly(0, 1, 2).inOrder();
         assertThat(lld1.length()).isEqualTo(8);//测试一下放大缩小
-    }
+    }}
 
 
 
